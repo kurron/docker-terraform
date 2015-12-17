@@ -1,0 +1,10 @@
+packer:
+    build: .
+    labels:
+        org.kurron.description: "Packer"
+        org.kurron.version: "0.8.6"
+    container_name: "packer"
+    net: "host"
+    volumes:
+        - /home/vagrant:/home/developer
+    user: 1000:1000
