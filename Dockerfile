@@ -23,6 +23,7 @@ RUN groupadd --gid 1000 developer && \
 
 # the user of this image is expected to mount his actual home directory to this one
 VOLUME ["/home/developer"]
+VOLUME ["/pwd"]
 
 ENV HOME /home/developer
 WORKDIR /home/developer
