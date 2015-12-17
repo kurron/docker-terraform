@@ -26,6 +26,6 @@ VOLUME ["/home/developer"]
 VOLUME ["/pwd"]
 
 ENV HOME /home/developer
-WORKDIR /home/developer
+WORKDIR /pwd
 ENTRYPOINT ["/usr/local/bin/terraform"]
 CMD ["--version"]
