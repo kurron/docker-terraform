@@ -2,9 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.ide.name="Packer" org.kurron.ide.version=0.8.6
+LABEL org.kurron.ide.name="Terraform" org.kurron.ide.version=0.6.8
 
-ADD https://dl.bintray.com/mitchellh/packer/packer_0.8.6_linux_amd64.zip /tmp/ide.zip 
+ADD https://releases.hashicorp.com/terraform/0.6.8/terraform_0.6.8_linux_amd64.zip /tmp/ide.zip 
 
 RUN apt-get update && \
     apt-get install -y unzip && \
@@ -26,5 +26,5 @@ VOLUME ["/home/developer"]
 
 ENV HOME /home/developer
 WORKDIR /home/developer
-ENTRYPOINT ["/usr/local/bin/packer"]
+ENTRYPOINT ["/usr/local/bin/terraform"]
 CMD ["--version"]

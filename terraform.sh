@@ -2,11 +2,11 @@
 
 CMD="docker run \
        --rm \
-       --name packer \
+       --name terraform \
        --net "host" \
        --user 1000:1000 \
        --volume $HOME:/home/developer \
-       kurron/docker-packer:latest"
+       kurron/docker-terraform:latest"
 
 #echo $CMD
 eval $CMD $*

@@ -1,9 +1,9 @@
-packer:
+terraform:
     build: .
     labels:
-        org.kurron.description: "Packer"
-        org.kurron.version: "0.8.6"
-    container_name: "packer"
+        org.kurron.description: "Terraform"
+        org.kurron.version: "0.6.8"
+    container_name: "terraform"
     net: "host"
     volumes:
         - /home/vagrant:/home/developer
