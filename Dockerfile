@@ -25,6 +25,11 @@ RUN groupadd --gid 1000 developer && \
 VOLUME ["/home/developer"]
 VOLUME ["/pwd"]
 
+# Set the AWS environment variables
+ENV AWS_ACCESS_KEY_ID OVERRIDE ME
+ENV AWS_SECRET_ACCESS_KEY OVERRIDE_ME
+ENV AWS_REGION us-west-2
+
 ENV HOME /home/developer
 WORKDIR /pwd
 ENTRYPOINT ["/usr/local/bin/terraform"]
