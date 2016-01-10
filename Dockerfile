@@ -2,9 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.ide.name="Terraform" org.kurron.ide.version=0.6.8
+LABEL org.kurron.ide.name="Terraform" org.kurron.ide.version=0.6.9
 
-ADD https://releases.hashicorp.com/terraform/0.6.8/terraform_0.6.8_linux_amd64.zip /tmp/ide.zip 
+ADD https://releases.hashicorp.com/terraform/0.6.9/terraform_0.6.9_linux_amd64.zip /tmp/ide.zip 
 
 RUN apt-get update && \
     apt-get install -y unzip ca-certificates && \
