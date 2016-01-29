@@ -3,6 +3,8 @@
 CMD="docker run \
        --rm \
        --name terraform \
+       --interactive \
+       --tty \
        --net "host" \
        --user 1000:1000 \
        --volume $HOME:/home/developer \
