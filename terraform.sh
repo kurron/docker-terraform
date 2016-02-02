@@ -12,7 +12,7 @@ CMD="docker run \
        --env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
        --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
        --env AWS_REGION=$AWS_REGION \
-       kurron/docker-terraform:latest"
+       kurron/docker-terraform:0.6.9"
 
 #echo $CMD
 eval $CMD $*
