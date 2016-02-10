@@ -1,8 +1,11 @@
 terraform:
     build: .
-    container_name: "terraform"
     net: "host"
     volumes:
         - /home/vagrant:/home/developer
         - .:/pwd
+    environment:
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+        AWS_REGION: ${AWS_REGION}
     user: 1000:1000
